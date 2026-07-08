@@ -1,0 +1,210 @@
+
+services:
+
+  # ---------------- Base de datos ----------------
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./init-databases.sql:/docker-entrypoint-initdb.d/init-databases.sql
+    networks:
+      - biblioteca-net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  # ---------------- Servidor Eureka ----------------
+  eureka:
+    build: ./eureka
+    container_name: eureka
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8761:8761"
+    networks:
+      - biblioteca-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  # ---------------- Microservicios simples ----------------
+  autor-service:
+    build: ./autor-service
+    container_name: autor-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8081:8081"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka:
+        condition: service_started
+    networks:
+      - biblioteca-net
+
+  genero-service:
+    build: ./genero-service
+    container_name: genero-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8082:8082"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka:
+        condition: service_started
+    networks:
+      - biblioteca-net
+
+  nombre-service:
+    build: ./nombre-service
+    container_name: nombre-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8084:8084"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka:
+        condition: service_started
+    networks:
+      - biblioteca-net
+
+  domicilio-service:
+    build: ./domicilio-service
+    container_name: domicilio-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8085:8085"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka:
+        condition: service_started
+    networks:
+      - biblioteca-net
+
+  bibliotecario-service:
+    build: ./bibliotecario-service
+    container_name: bibliotecario-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8087:8087"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka:
+        condition: service_started
+    networks:
+      - biblioteca-net
+
+  bodega-service:
+    build: ./bodega-service
+    container_name: bodega-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8089:8089"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka:
+        condition: service_started
+    networks:
+      - biblioteca-net
+
+  
+  libro-service:
+    build: ./libro-service
+    container_name: libro-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8083:8083"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka:
+        condition: service_started
+    networks:
+      - biblioteca-net
+
+  usuario-service:
+    build: ./usuario-service
+    container_name: usuario-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8086:8086"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka:
+        condition: service_started
+    networks:
+      - biblioteca-net
+
+  turnos-service:
+    build: ./turnos-service
+    container_name: turnos-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8088:8088"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka:
+        condition: service_started
+    networks:
+      - biblioteca-net
+
+  estante-service:
+    build: ./estante-service
+    container_name: estante-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8090:8090"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka:
+        condition: service_started
+    networks:
+      - biblioteca-net
+
+  
+  gateway-service:
+    build: ./gateway-service
+    container_name: gateway-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"
+    depends_on:
+      eureka:
+        condition: service_started
+    networks:
+      - biblioteca-net
+
+networks:
+  biblioteca-net:
+    driver: bridge
+
+volumes:
+  mysql-data:

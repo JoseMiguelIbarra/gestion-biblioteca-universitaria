@@ -1,0 +1,1502 @@
+{
+  "info": {
+    "_postman_id": "077f8fd1-717f-4f3e-a3bc-809f90872c56",
+    "name": "GestorDeBiblioteca",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53287628",
+    "_collection_link": "https://go.postman.co/collection/53287628-077f8fd1-717f-4f3e-a3bc-809f90872c56?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Generos",
+      "item": [
+        {
+          "name": "Obtener Generos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8082/generos",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "generos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Genero Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8082/generos/{{idGenero}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "generos",
+                "{{idGenero}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Genero",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Maquiavélico\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8082/generos",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "generos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Genero por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Maquiavélicoo\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8082/generos/{{idGenero}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "generos",
+                "{{idGenero}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Maquiavélico\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8082/generos/{{idGenero}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "generos",
+                "{{idGenero}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Autores",
+      "item": [
+        {
+          "name": "Obtener Autores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8081/autores",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "autores"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Autor Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8081/autores/{{idAutor}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "autores",
+                "{{idAutor}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Autor",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8081/autores",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "autores"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Autor por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"José Donoso\",\r\n    \"fecha_nac\": \"1924-10-05\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8081/autores/{{idAutor}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "autores",
+                "{{idAutor}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"José Donoso\",\r\n    \"fecha_nac\": \"1924-10-05\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8081/autores/{{idAutor}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "autores",
+                "{{idAutor}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Libros",
+      "item": [
+        {
+          "name": "Obtener Libros",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8083/libros",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "libros"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Libro por ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8083/libros/{{idLibro}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "libros",
+                "{{idLibro}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Libro",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\": \"Melancolías Pertuberantes\",\r\n    \"isbn\": \"456-456-456\",\r\n    \"idGenero\": 1,\r\n    \"idAutor\": 1,\r\n    \"estado\" : true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8083/libros",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "libros"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Libro por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\": \"Melancolías Pertuberantes\",\r\n    \"isbn\": \"456-456-456\",\r\n    \"idGenero\": 2,\r\n    \"idAutor\": 2,\r\n    \"estado\" : true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8083/libros//{{idLibroActualizar}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "libros",
+                "",
+                "{{idLibroActualizar}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\": \"Melancolías Pertuberantes\",\r\n    \"isbn\": \"456-456-456\",\r\n    \"id_genero\": 1,\r\n    \"idAutor\": 3,\r\n    \"estado\" : true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8083/libros/{{idLibro}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "libros",
+                "{{idLibro}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar Libro por Id Autor",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8083/libros/autor/{{idAutor}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "libros",
+                "autor",
+                "{{idAutor}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar Libro por Id Genero",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8083/libros/genero/{{idGenero}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "libros",
+                "genero",
+                "{{idGenero}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Nombres",
+      "item": [
+        {
+          "name": "Obtener Nombres",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8084/nombres",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "nombres"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Nombre por Id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8084/nombres/{{idNombre}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "nombres",
+                "{{idNombre}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Nombre",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Esteban\",\r\n    \"segundoNombre\": \"Ignacio\",\r\n    \"apPaterno\": \"Flores\",\r\n    \"apMaterno\": \"Huenchullan\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8084/nombres",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "nombres"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Nombre por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Estebann\",\r\n    \"segundoNombre\": \"Ignacio\",\r\n    \"apPaterno\": \"Flores\",\r\n    \"apMaterno\": \"Huenchullan\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8084/nombres/{{idNombre}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "nombres",
+                "{{idNombre}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\": \"Melancolías Pertuberantes\",\r\n    \"isbn\": \"456-456-456\",\r\n    \"id_genero\": 1,\r\n    \"idAutor\": 3,\r\n    \"estado\" : true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8084/nombres/{{idNombre}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "nombres",
+                "{{idNombre}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Domicilios",
+      "item": [
+        {
+          "name": "Obtener Domicilios",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8085/domicilios",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "domicilios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Domicilio por Id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8085/domicilios/{{idDomicilio}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "domicilios",
+                "{{idDomicilio}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Domicilio",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"direccion\": \"El Libertador 1145\",\r\n    \"comuna\": \"El Bosque\",\r\n    \"pais\": \"Chile\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8085/domicilios",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "domicilios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Domicilio por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"direccion\": \"El Libertador 1154\",\r\n    \"comuna\": \"El Bosque\",\r\n    \"pais\": \"Chile\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8085/domicilios/{{idDomicilio}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "domicilios",
+                "{{idDomicilio}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\": \"Melancolías Pertuberantes\",\r\n    \"isbn\": \"456-456-456\",\r\n    \"id_genero\": 1,\r\n    \"idAutor\": 3,\r\n    \"estado\" : true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8085/domicilios/{{idDomicilio}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "domicilios",
+                "{{idDomicilio}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Obtener Usuarios",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8086/usuarios",
+              "host": [
+                "localhost"
+              ],
+              "port": "8086",
+              "path": [
+                "usuarios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Usuario por Id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8086/usuarios/{{idUsuario}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8086",
+              "path": [
+                "usuarios",
+                "{{idUsuario}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Usuario",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"idNombre\": 1,\r\n    \"rut\": \"15385935-7\",\r\n    \"edad\": 24,\r\n    \"idDomicilio\": 1,\r\n    \"fechaNacimiento\": \"2007-04-12\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8086/usuarios",
+              "host": [
+                "localhost"
+              ],
+              "port": "8086",
+              "path": [
+                "usuarios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Usuario por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"idNombre\": 1,\r\n    \"rut\": \"15385935-7\",\r\n    \"edad\": 24,\r\n    \"idDomicilio\": 2,\r\n    \"fechaNacimiento\": \"2007-04-12\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8086/usuarios/{{idUsuarioActualizar}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8086",
+              "path": [
+                "usuarios",
+                "{{idUsuarioActualizar}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\": \"Melancolías Pertuberantes\",\r\n    \"isbn\": \"456-456-456\",\r\n    \"id_genero\": 1,\r\n    \"idAutor\": 3,\r\n    \"estado\" : true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8086/usuarios/{{idUsuario}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8086",
+              "path": [
+                "usuarios",
+                "{{idUsuario}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar Usuario por Id Nombre",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8086/usuarios/nombre/{{idNombre}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8086",
+              "path": [
+                "usuarios",
+                "nombre",
+                "{{idNombre}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar Usuario por Id Domicilio",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8086/usuarios/domicilio/{{idDomicilio}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8086",
+              "path": [
+                "usuarios",
+                "domicilio",
+                "{{idDomicilio}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bodegas",
+      "item": [
+        {
+          "name": "Obtener Bodegas",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8089/bodegas",
+              "host": [
+                "localhost"
+              ],
+              "port": "8089",
+              "path": [
+                "bodegas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Bodega por ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8089/bodegas/{{idBodega}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8089",
+              "path": [
+                "bodegas",
+                "{{idBodega}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Bodega",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Bodega Respaldo\",\r\n    \"ubicacion\": \"Piso -1\",\r\n    \"capacidad\": 600\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8089/bodegas",
+              "host": [
+                "localhost"
+              ],
+              "port": "8089",
+              "path": [
+                "bodegas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Bodega por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Bodega Remodelamiento\",\r\n    \"ubicacion\": \"Piso -2\",\r\n    \"capacidad\": 800\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8089/bodegas/{{idBodega}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8089",
+              "path": [
+                "bodegas",
+                "{{idBodega}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\": \"Melancolías Pertuberantes\",\r\n    \"isbn\": \"456-456-456\",\r\n    \"id_genero\": 1,\r\n    \"idAutor\": 3,\r\n    \"estado\" : true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8089/bodegas/{{idBodega}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8089",
+              "path": [
+                "bodegas",
+                "{{idBodega}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Estantes",
+      "item": [
+        {
+          "name": "Obtener Estantes",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8090/estantes",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "estantes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Estante por Id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8090/estantes/{{idEstante}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "estantes",
+                "{{idEstante}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Estante",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"numero\" : 6,\r\n    \"idBodega\" : 3,\r\n    \"capacidad\" : 9000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8090/estantes",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "estantes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Estante por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"numero\" : 6,\r\n    \"idBodega\" : 3,\r\n    \"capacidad\" : 9000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8090/estantes/{{idEstante}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "estantes",
+                "{{idEstante}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titulo\": \"Melancolías Pertuberantes\",\r\n    \"isbn\": \"456-456-456\",\r\n    \"id_genero\": 1,\r\n    \"idAutor\": 3,\r\n    \"estado\" : true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8090/estantes/{{idEstante}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "estantes",
+                "{{idEstante}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar Estante por Id Bodega",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Miguel de Cervantes\",\r\n    \"fecha_nac\": \"1547-08-29\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8090/estantes/bodega/{{idBodega}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "estantes",
+                "bodega",
+                "{{idBodega}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bibliotecarios",
+      "item": [
+        {
+          "name": "Obtener Bibliotecarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8087/bibliotecarios",
+              "host": [
+                "localhost"
+              ],
+              "port": "8087",
+              "path": [
+                "bibliotecarios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Bibliotecario por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8087/bibliotecarios/{{idBibliotecario}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8087",
+              "path": [
+                "bibliotecarios",
+                "{{idBibliotecario}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Bibliotecario",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"José Emiliano\",\r\n    \"edad\": 36,\r\n    \"fechaIngreso\": \"2019-07-24\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8087/bibliotecarios",
+              "host": [
+                "localhost"
+              ],
+              "port": "8087",
+              "path": [
+                "bibliotecarios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modificar Bibliotecario por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"José Pérez\",\r\n    \"edad\": 39,\r\n    \"fechaIngreso\": \"2019-07-24\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8087/bibliotecarios/{{idBibliotecario}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8087",
+              "path": [
+                "bibliotecarios",
+                "{{idBibliotecario}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"José Pérez\",\r\n    \"edad\": 39,\r\n    \"fechaIngreso\": \"2019-07-24\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8087/bibliotecarios/{{idBibliotecario}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8087",
+              "path": [
+                "bibliotecarios",
+                "{{idBibliotecario}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Turnos",
+      "item": [
+        {
+          "name": "Obtener Turnos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8088/turnos",
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "path": [
+                "turnos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Turno por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8088/turnos/{{idTurno}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "path": [
+                "turnos",
+                "{{idTurno}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Turno por Fecha",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8088/turnos/fecha/2026-06-10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "path": [
+                "turnos",
+                "fecha",
+                "2026-06-10"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Turno por Tipo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8088/turnos/tipo/MANANA",
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "path": [
+                "turnos",
+                "tipo",
+                "MANANA"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Turno",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"idBibliotecario\" : 5,\r\n    \"fechaTurno\": \"2026-05-16\",\r\n    \"horaInicio\": \"19:00:00\",\r\n    \"horaFin\": \"23:59:00\",\r\n    \"tipoTurno\": \"NOCHE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8088/turnos",
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "path": [
+                "turnos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Turno por ID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"idBibliotecario\" : 2,\r\n    \"fechaTurno\": \"2026-05-16\",\r\n    \"horaInicio\": \"19:00:00\",\r\n    \"horaFin\": \"23:59:00\",\r\n    \"tipoTurno\": \"NOCHE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8088/turnos/{{idTurno}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "path": [
+                "turnos",
+                "{{idTurno}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"idBibliotecario\" : 2,\r\n    \"fechaTurno\": \"2026-05-16\",\r\n    \"horaInicio\": \"19:00:00\",\r\n    \"horaFin\": \"23:59:00\",\r\n    \"tipoTurno\": \"NOCHE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8088/turnos/{{idTurno}}",
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "path": [
+                "turnos",
+                "{{idTurno}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

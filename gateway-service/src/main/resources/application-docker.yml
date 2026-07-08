@@ -1,0 +1,52 @@
+
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: autor-service
+              uri: http://autor-service:8081
+              predicates:
+                - Path=/autores/**
+            - id: genero-service
+              uri: http://genero-service:8082
+              predicates:
+                - Path=/generos/**
+            - id: libro-service
+              uri: http://libro-service:8083
+              predicates:
+                - Path=/libros/**
+            - id: nombre-service
+              uri: http://nombre-service:8084
+              predicates:
+                - Path=/nombres/**
+            - id: domicilio-service
+              uri: http://domicilio-service:8085
+              predicates:
+                - Path=/domicilios/**
+            - id: usuario-service
+              uri: http://usuario-service:8086
+              predicates:
+                - Path=/usuarios/**
+            - id: bibliotecario-service
+              uri: http://bibliotecario-service:8087
+              predicates:
+                - Path=/bibliotecarios/**
+            - id: turnos-service
+              uri: http://turnos-service:8088
+              predicates:
+                - Path=/turnos/**
+            - id: bodega-service
+              uri: http://bodega-service:8089
+              predicates:
+                - Path=/bodegas/**
+            - id: estante-service
+              uri: http://estante-service:8090
+              predicates:
+                - Path=/estantes/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:8761/eureka/

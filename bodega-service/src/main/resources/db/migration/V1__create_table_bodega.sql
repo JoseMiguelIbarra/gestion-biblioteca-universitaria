@@ -1,0 +1,6 @@
+CREATE TABLE bodega(
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+	ubicacion VARCHAR(100) NOT NULL,
+ 	capacidad BIGINT NOT NULL
+);

@@ -1,0 +1,7 @@
+CREATE TABLE domicilio(
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    direccion VARCHAR(50) NOT NULL,
+    comuna VARCHAR(50) NOT NULL,
+    pais VARCHAR(50) NOT NULL
+);
+

@@ -1,0 +1,6 @@
+CREATE TABLE estante(
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    numero BIGINT NOT NULL,
+    id_bodega BIGINT NOT NULL,
+    capacidad BIGINT NOT NULL
+);
