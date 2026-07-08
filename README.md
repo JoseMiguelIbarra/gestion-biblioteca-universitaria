@@ -1,7 +1,7 @@
 # Gestión de Biblioteca Universitaria
 Sistema de gestión para biblioteca digital basada en microservicios.
 
-#Descripción del proyecto
+# Descripción del proyecto
 
 Sistema de gestión para una biblioteca universitaria, construido bajo una
 arquitectura de microservicios independientes que se comunican mediante REST.
@@ -16,7 +16,7 @@ solicitudes hacia los microservicios. Algunos servicios consumen a otros de
 forma remota (por ejemplo, libro-service obtiene los datos de autor y género
 desde sus respectivos microservicios) usando WebClient.
 
-#Integrantes del equipo.
+# Integrantes del equipo.
 
 José Miguel Ibarra.
 Erick Herrera.
@@ -53,7 +53,7 @@ Asegurarse de tener instalado lo siguiente antes de ejecutar el proyecto:
 | 10. estante-service        | Encargado de gestionar los estantes y comunicar bodegas.                  | 8090   |
 | 11. gateway-service        | API Gateway: enrutamiento centralizado                                    | 8080   |
 
-#Rutas principales del Gateway
+# Rutas principales del Gateway
 
 
 Ruta del Gateway                    Microservicio destino
@@ -70,7 +70,7 @@ Ruta del Gateway                    Microservicio destino
 /estantes/**                        estante-service
 
 
-#Documentación Swagger / OpenAPI
+# Documentación Swagger / OpenAPI
 
 
 Microservicio            Enlace Swagger
@@ -86,7 +86,7 @@ turnos-service            http://localhost:8088/swagger-ui.html
 bodega-service            http://localhost:8089/swagger-ui.html
 estante-service           http://localhost:8090/swagger-ui.html
 
-#Ejecución local
+# Ejecución local
 
 1. Creacion de base de datos.
 
