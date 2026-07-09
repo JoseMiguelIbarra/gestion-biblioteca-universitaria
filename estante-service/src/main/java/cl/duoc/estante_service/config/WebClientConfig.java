@@ -12,7 +12,7 @@ public class WebClientConfig {
     private String bodegaServiceUrl;
 
     @Bean
-    public WebClient autorWebClient() {
+    public WebClient bodegaWebClient() {
         return WebClient.builder()
                 .baseUrl(bodegaServiceUrl)
                 .defaultHeader("Content-Type", "application/json")
