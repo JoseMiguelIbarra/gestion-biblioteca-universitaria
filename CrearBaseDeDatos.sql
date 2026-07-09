@@ -1,5 +1,5 @@
 -- Script de inicialización de Bases de Datos
--- Bayron Urrutia - José Ibarra - Erick Herrera
+-- José Ibarra - Erick Herrera
 
 -- Crear Autores --
 DROP DATABASE IF EXISTS autores;
